@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilo clasico</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top blur">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="container-fluid px-0">
+        <div class="hero ">
+            <h1>Estilo Clásico</h1>
+            <!-- <div class="row justify-content-end"> -->
+            <div class="hero-gradient"></div>
+            <form class="formulario blur col-lg-5">
+                <h2 class="mb-4">Agenda tu cita</h2>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                        <option selected value="1">Corte de pelo</option>
+                        <option value="2">Arreglo de barba</option>
+                        <option value="3">Tinta</option>
+                        <option value="4">Manicura</option>
+                    </select>
+                    <label for="floatingSelect">Seleccione un servicio</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                        <option selected value="0">Barbero aleatorio</option>
+                        <option value="1">Barbero1</option>
+                        <option value="2">Barbero2</option>
+                        <option value="3">Barbero3</option>
+                        <option value="4">Barbero4</option>
+                    </select>
+                    <label for="floatingSelect">Works with selects</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Fecha</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="time" class="form-control inputHora" list="horasDisponibles" min="09:00" max="18:00"
+                        step="1800">
+                    <label>Hora</label>
+                    <datalist id="horasDisponibles">
+                        <option value="09:00">
+                        <option value="09:30">
+                        <option value="10:00">
+                        <option value="10:30">
+                        <option value="11:00">
+                        <option value="11:30">
+                        <option value="12:00">
+                        <option value="12:30">
+                        <option value="13:00">
+                        <option value="13:30">
+                        <option value="14:00">
+                        <option value="14:30">
+                        <option value="15:00">
+                        <option value="15:30">
+                        <option value="16:00">
+                        <option value="16:30">
+                        <option value="17:00">
+                        <option value="17:30">
+                        <option value="18:00">
+                    </datalist>
+                    <div id="" class="form-text">La barberia esta abierta de 9:00 a 18:00</div>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <!-- </div> -->
+        </div>
+
+    </section>
+
+    <section class="container-fluid pb-5" id="servicios">
+        <h1 class="ps-5">Servicios</h1>
+        <div class="row justify-content-evenly px-5">
+            <div class="card blur p-0" style="width: 18rem;">
+                <img src="img/servicio_1.webp" class="card-img-top img-fluid" alt="servicio_1">
+                <div class="card-body">
+                    <h5 class="card-title">Corte de pelo</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">Precio: $500</h6>
+                    <p class="card-text">Estilo personalizado según tu rostro y preferencia, con acabado profesional.</p>
+                </div>
+            </div>
+            <div class="card blur p-0" style="width: 18rem;">
+                <img src="img/servicio_2.jpg" class="card-img-top" alt="servicio_2">
+                <div class="card-body">
+                    <h5 class="card-title">Arreglo de barba</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">Precio: $250</h6>
+                    <p class="card-text">Perfilado y diseño de barba para un look limpio y definido.</p>
+                </div>
+            </div>
+            <div class="card blur p-0" style="width: 18rem;">
+                <img src="img/servicio_3.jpg" class="card-img-top" alt="servicio_3">
+                <div class="card-body">
+                    <h5 class="card-title">Tinta</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">Precio: $850</h6>
+                    <p class="card-text">Coloración precisa para cubrir canas o renovar tu estilo.</p>
+                </div>
+            </div>
+            <div class="card blur p-0" style="width: 18rem;">
+                <img src="img/servicio_4.webp" class="card-img-top" alt="servicio_4">
+                <div class="card-body">
+                    <h5 class="card-title">Manicura</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">Precio: $250</h6>
+                    <p class="card-text">Cuidado y limpieza de uñas para manos prolijas y bien presentadas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="barberos" class="container-fluid pb-5">
+        <h1 class="row ps-5 ">Barberos</h1>
+        <div class="px-5 d-flex justify-content-evenly">
+
+            <div class="card card-barbero mb-3 blur" style="max-width: 840px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="img/barbero_1.webp" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body d-flex">
+                            <!-- Columna del texto -->
+                            <div class="me-3" style="flex: 1;">
+                                <h5 class="card-title">Andres Calamardo</h5>
+                                <p class="card-text">
+                                    es un barbero profesional con estilo moderno y atención personalizada. Especialista
+                                    en cortes y barbas, siempre busca resaltar lo mejor de cada cliente.
+                                </p>
+                                <p class="card-text">
+                                    <small class="text-body-secondary">Last updated 3 mins ago</small>
+                                </p>
+                            </div>
+
+                            <!-- Columna de reseñas -->
+                            <div style="flex: 1;">
+                                <h6>Reseña:</h6>
+
+                                <!-- Contenedor de reseñas -->
+                                <div class="review-box border border-dark-subtle rounded p-2 mb-2">
+                                    <strong>Juan Pérez</strong>
+                                    <div class="stars text-warning mb-1">
+                                        ★★★★☆
+                                    </div>
+                                    <p class="mb-0">Excelente servicio y muy buena atención. Volveré pronto.</p>
+                                </div>
+
+                                <div class="review-box border border-dark-subtle rounded p-2 mb-2">
+                                    <strong>Ana Gómez</strong>
+                                    <div class="stars text-warning mb-1">
+                                        ★★★☆☆
+                                    </div>
+                                    <p class="mb-0">El corte estuvo bien, pero esperaba más puntualidad.</p>
+                                </div>
+
+                                <!-- Puedes agregar más reseñas similares -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card card-barbero mb-3 blur" style="max-width: 840px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="img/barbero_1.webp" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body d-flex">
+                            <!-- Columna del texto -->
+                            <div class="me-3" style="flex: 1;">
+                                <h5 class="card-title">Andres Calamardo</h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text below as a natural lead-in to additional
+                                    content.
+                                    This content is a little bit longer.
+                                </p>
+                                <p class="card-text">
+                                    <small class="text-body-secondary">Last updated 3 mins ago</small>
+                                </p>
+                            </div>
+
+                            <!-- Columna de reseñas -->
+                            <div style="flex: 1;">
+                                <h6>Reseña:</h6>
+
+                                <!-- Contenedor de reseñas -->
+                                <div class="review-box border border-dark-subtle rounded p-2 mb-2">
+                                    <strong>Juan Pérez</strong>
+                                    <div class="stars text-warning mb-1">
+                                        ★★★★☆
+                                    </div>
+                                    <p class="mb-0">Excelente servicio y muy buena atención. Volveré pronto.</p>
+                                </div>
+
+                                <div class="review-box border border-dark-subtle rounded p-2 mb-2">
+                                    <strong>Ana Gómez</strong>
+                                    <div class="stars text-warning mb-1">
+                                        ★★★☆☆
+                                    </div>
+                                    <p class="mb-0">El corte estuvo bien, pero esperaba más puntualidad.</p>
+                                </div>
+
+                                <!-- Puedes agregar más reseñas similares -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <section>
+        <h1>Galeria</h1>
+        <div id="carouselExampleCaptions" class="carousel slide p-5 w-50">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/exapmle_1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/example_2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/hero.webp" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

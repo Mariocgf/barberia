@@ -1,0 +1,72 @@
+:root {
+  --color-principal: #1c1c1c;
+  --color_secundario: #d9d9d9;
+  --color-terciario: #8b0000;
+}
+.birthstone-regular {
+  font-family: "Birthstone", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hero {
+  background-image: url("../img/hero.webp");
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  h1 {
+    font-family: Birthstone;
+    font-size: 10rem;
+  }
+}
+.formulario {
+  /* background-color: #d9d9d985;
+    backdrop-filter: blur(1rem); */
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  /* height: auto; */
+  padding: 1rem;
+  border-radius: 1rem;
+  min-width: 10rem;
+}
+.hero-gradient {
+  background: linear-gradient(
+    0deg,
+    var(--color-principal) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.blur {
+  background-color: #d9d9d998 !important;
+  backdrop-filter: blur(1rem) !important;
+}
+section {
+  background-color: var(--color-principal);
+}
+h1,
+h2 {
+  color: var(--color_secundario);
+}
+.card {
+  img {
+    height: 16rem;
+    object-fit: cover;
+  }
+}
+.card-barbero {
+  img{
+    height: 100%;
+  }
+}
