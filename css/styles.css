@@ -70,3 +70,10 @@ h2 {
     height: 100%;
   }
 }
+
+.reservas-section {
+  display: none;    /* oculto por defecto */
+}
+.reservas-section.logueado {
+  display: block;   /* solo si tiene la clase logueado */
+}

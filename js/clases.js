@@ -5,14 +5,19 @@ class Calificacion {
       this.descripcion = descripcion; // texto del comentario
       this.puntaje = puntaje;         // número (por ejemplo, 1–5)
     }
+    añadirCalificacion(calif) {
+    if (calif instanceof Calificacion) {
+      this.calificaciones.push(calif);
+    }
+  }
   }
   
   // Clase para representar un servicio
   class Servicio {
-    constructor(nombre, precio, duracion) {
+    constructor(nombre, precio) {
       this.nombre = nombre;   // ej. "Corte de pelo"
       this.precio = precio;   // en la moneda que uses
-      this.duracion = duracion; // en minutos
+      this.duracion = 30; // en minutos
     }
   }
   
