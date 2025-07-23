@@ -4,7 +4,6 @@ const INPUT_CLIENTE_CALIFICACION = document.querySelector("#inputCalificacionCli
 const INPUT_BARBERO_CALIFICACION = document.querySelector('#inputCalificacionBarbero');
 const INPUT_RESENA_CALIFICAION = document.querySelector("#inputCalificacionResena");
 
-const INPUT_SERVICIO_AGENDA = document.querySelector('servicio-select');
 
 
 //login admin
@@ -16,4 +15,14 @@ const CONTRA = document.getElementById("contra");
 const btnIngreso = document.getElementById("btnIngreso");
 const admin = document.getElementById("reservas-section");
 const btnLogout = document.getElementById("btnLogout");
+<<<<<<< HEAD
 const contenedorAdmin = document.getElementById("contenedorAdmin")
+=======
+const INPUT_SERVICIO_AGENDA = document.querySelector('#servicio-select');
+const INPUT_BARBERO_AGENDA = document.querySelector('#select_barber_agenda');
+
+const loader = document.getElementById('loader');
+const content = document.getElementById('reservas-content');
+const tbody = document.getElementById('tbody-reservas');
+const btnOrden = document.getElementById('sort-fecha-asc');
+>>>>>>> a23829284b5adc7e87770a40470486e176eeaba6

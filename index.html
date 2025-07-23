@@ -87,6 +87,69 @@
         /><br />
         <button class="btn btn-info" id="btnIngreso">Ingresar</button>
       </div>
+    <section id="home" class="container-fluid px-0">
+        <div class="hero ">
+            <h1>Estilo Clásico</h1>
+            <!-- <div class="row justify-content-end"> -->
+            <div class="hero-gradient"></div>
+            <form class="formulario blur col-lg-5">
+                <h2 class="mb-4">Agenda tu cita</h2>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <select class="form-select" id="servicio-select">
+                    <option selected value="">Elige un servicio</option>
+                </select>
+                <label for="servicio-select">Servicio</label>
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="select_barber_agenda" aria-label="Floating label select example">
+                        
+                    </select>
+                    <label for="floatingSelect">Works with selects</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Fecha</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="time" class="form-control inputHora" list="horasDisponibles" min="09:00" max="18:00"
+                        step="1800">
+                    <label>Hora</label>
+                    <datalist id="horasDisponibles">
+                        <option value="09:00">
+                        <option value="09:30">
+                        <option value="10:00">
+                        <option value="10:30">
+                        <option value="11:00">
+                        <option value="11:30">
+                        <option value="12:00">
+                        <option value="12:30">
+                        <option value="13:00">
+                        <option value="13:30">
+                        <option value="14:00">
+                        <option value="14:30">
+                        <option value="15:00">
+                        <option value="15:30">
+                        <option value="16:00">
+                        <option value="16:30">
+                        <option value="17:00">
+                        <option value="17:30">
+                        <option value="18:00">
+                    </datalist>
+                    <div id="" class="form-text">La barberia esta abierta de 9:00 a 18:00</div>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <!-- </div> -->
+        </div>
+
     </section>
 
     <div id="global">
@@ -516,6 +579,23 @@
         </div>
       </section>
     </div>
+    </section>
+
+    <section>
+        <h1 class="ps-5">Contacto</h1>
+        <div class="container-contacto">
+            <!-- agrega casilla de contacto aca -->
+            <form action="">
+
+            </form>
+            <div class="container-contacto-map">
+                <img src="/img/map.png" alt="">
+            </div>
+        </div>
+
+
+    </section>
+
     <!-- HTML -->
     <div id="contenedorAdmin">
       <section
@@ -570,6 +650,8 @@
     <script src="js/script.js"></script>
     <script src="js/utilities.js"></script>
     <script src="js/CU/Login.js"></script>
+    <script src="js/CU/CalificarBarbero.js"></script>
+    <script src="js/CU/ListarReserva.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
