@@ -72,12 +72,12 @@ h2 {
   }
 }
 
-.reservas-section {
-  display: none; /* oculto por defecto */
+/* .reservas-section {
+  display: none; 
 }
 .reservas-section.logueado {
-  display: block; /* solo si tiene la clase logueado */
-}
+  display: block; 
+} */
 
 .star-rating {
   direction: rtl;
@@ -118,5 +118,50 @@ h2 {
   div{
     grid-column: 6/12;
   }
+}
+
+#loginDiv{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("../img/hero.webp");
+    min-height: 100vh;
+ background-size: cover;
+}
+
+#loginForm{
+  width: 400px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#reservas-section{
+  display: none;
+  flex-direction: column;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+}
+
+#contenedorAdmin{
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-image: url("../img/hero.webp");
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#btnLogout{
+  display: none;
 }
 

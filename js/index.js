@@ -5,5 +5,5 @@ function inicio() {
     poblarSelect(INPUT_BARBERO_CALIFICACION, "Seleccione un barbero", "BARBEROS");
     poblarSelect(INPUT_SERVICIO_AGENDA, "Seleccione un servicio", "SERVICIOS");
     poblarSelect(INPUT_BARBERO_AGENDA, "Seleccione un barbero", "BARBEROS");
-    poblarSelect(filter-barbero, "Seleccione un barbero", "BARBEROS");
+    poblarSelect(filterB, "Seleccione un barbero", "BARBEROS");
 }

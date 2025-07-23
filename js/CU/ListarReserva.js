@@ -19,21 +19,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // 8) Filtrar por barbero
     filterB.addEventListener('change', () => {
       const val = filterB.value;
-      render(reservas.filter(r => !val || r.barbero?.nombre === val));
+      render(agendas.filter(r => !val || r.barbero?.nombre === val));
     });
   
     // 9) Ordenar ascendente por fecha
     btnOrden.addEventListener('click', () => {
-      reservas.sort((a, b) => a.fecha - b.fecha);
-      render(reservas);
+      agendas.sort((a, b) => a.fecha - b.fecha);
+      render(agendas);
     });
   
     // 10) Simular precarga (500 ms)
-    setTimeout(() => {
-      loader.classList.add('d-none');
-      content.classList.remove('d-none');
-      render(reservas);
-    }, 500);
+    // setTimeout(() => {
+    //   loader.classList.add('d-none');
+    //   content.classList.remove('d-none');
+    //   render(agendas);
+    // }, 500);
   });
   
   
