@@ -66,14 +66,47 @@ h2 {
   }
 }
 .card-barbero {
-  img{
+  grid-column: span 6;
+  img {
     height: 100%;
   }
 }
 
 .reservas-section {
-  display: none;    /* oculto por defecto */
+  display: none; /* oculto por defecto */
 }
 .reservas-section.logueado {
-  display: block;   /* solo si tiene la clase logueado */
+  display: block; /* solo si tiene la clase logueado */
+}
+
+.star-rating {
+  direction: rtl;
+  font-size: 2rem;
+  unicode-bidi: bidi-override;
+  display: inline-flex;
+}
+
+.star-rating input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+
+.star-rating label {
+  cursor: pointer;
+  color: #ccc;
+}
+
+.star-rating input[type="radio"]:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: gold;
+}
+
+.container-barberos{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
 }

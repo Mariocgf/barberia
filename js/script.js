@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2) Definir barberos
   const barberos = [
-    new Barbero('Juan Pérez',     'Especialista en cortes modernos'),
-    new Barbero('Ana Gómez',      'Experta en perfilado de barba'),
-    new Barbero('Carlos López',   'Maestro en degradados y estilos clásicos'),
-    new Barbero('María Rodríguez','Profesional en coloración y diseño')
+    new Barbero('Juan Pérez', 'Especialista en cortes modernos'),
+    new Barbero('Ana Gómez', 'Experta en perfilado de barba'),
+    new Barbero('Carlos López', 'Maestro en degradados y estilos clásicos'),
+    new Barbero('María Rodríguez', 'Profesional en coloración y diseño')
   ];
 
   // 3) Poblamos el <select> de servicios
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   selectServicio.innerHTML = `<option selected value="">Elige un servicio</option>`;
   servicios.forEach(s => {
     const opt = document.createElement('option');
-    opt.value       = s.nombre;
+    opt.value = s.nombre;
     opt.textContent = `${s.nombre} — $${s.precio}`;
     selectServicio.appendChild(opt);
   });
@@ -33,21 +33,21 @@ document.addEventListener('DOMContentLoaded', () => {
   filterB.innerHTML = `<option value="">Todos</option>`;
   barberos.forEach(b => {
     const opt = document.createElement('option');
-    opt.value       = b.nombre;
+    opt.value = b.nombre;
     opt.textContent = b.nombre;
     filterB.appendChild(opt);
   });
 
   // 5) Referencias al DOM
-  const loader   = document.getElementById('loader');
-  const content  = document.getElementById('reservas-content');
-  const tbody    = document.getElementById('tbody-reservas');
+  const loader = document.getElementById('loader');
+  const content = document.getElementById('reservas-content');
+  const tbody = document.getElementById('tbody-reservas');
   const btnOrden = document.getElementById('sort-fecha-asc');
 
   // 6) Reservas iniciales usando los barberos del array
   let reservas = [
     new Agenda('2025-07-20', servicios[0], 'Carlos', '099123456', 'carlos@mail.com', barberos[0]),
-    new Agenda('2025-07-21', servicios[1], 'María',  '098654321', 'maria@mail.com',  barberos[1])
+    new Agenda('2025-07-21', servicios[1], 'María', '098654321', 'maria@mail.com', barberos[1])
   ];
 
   // 7) Función de renderizado
@@ -58,8 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <tr>
           <td>${r.cliente.nombre}</td>
           <td>${r.barbero?.nombre || '—'}</td>
-          <td>${r.fecha.toISOString().slice(0,10)}</td>
-          <td>${r.fecha.toTimeString().slice(0,5)}</td>
+          <td>${r.fecha.toISOString().slice(0, 10)}</td>
+          <td>${r.fecha.toTimeString().slice(0, 5)}</td>
           <td>${r.servicio.nombre}</td>
         </tr>`);
     });
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 9) Ordenar ascendente por fecha
   btnOrden.addEventListener('click', () => {
-    reservas.sort((a,b) => a.fecha - b.fecha);
+    reservas.sort((a, b) => a.fecha - b.fecha);
     render(reservas);
   });
 
@@ -84,3 +84,20 @@ document.addEventListener('DOMContentLoaded', () => {
     render(reservas);
   }, 500);
 });
+
+function calificarBarbero() {
+  if (FORM_CALIFICACION.reportValidity()) { 
+    const INPUT_RATING_CALIFICACION = document.querySelector('input[name="rating"]:checked');
+    if(!INPUT_RATING_CALIFICACION){
+      alert("Debe seleccionar una calificacion");
+      return;
+    }
+    const calificacion = new Calificacion(INPUT_CLIENTE_CALIFICACION.value,INPUT_RESENA_CALIFICAION.value,INPUT_RATING_CALIFICACION.value);
+    const barbero = barberos.find(b => b.nombre = INPUT_BARBERO_CALIFICACION.value);
+    barbero.calificaciones.push(calificacion);
+    //logica de listar barbero en vista
+    FORM_CALIFICACION.reset();
+    alert("Calificado con exito")
+  }
+
+}

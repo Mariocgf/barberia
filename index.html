@@ -60,9 +60,9 @@
                     <label for="floatingInput">Email address</label>
                 </div>
                 <select class="form-select" id="servicio-select">
-    <option selected value="">Elige un servicio</option>
-  </select>
-  <label for="servicio-select">Servicio</label>
+                    <option selected value="">Elige un servicio</option>
+                </select>
+                <label for="servicio-select">Servicio</label>
                 <div class="form-floating mb-3">
                     <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
                         <option selected value="0">Barbero aleatorio</option>
@@ -121,7 +121,8 @@
                 <div class="card-body">
                     <h5 class="card-title">Corte de pelo</h5>
                     <h6 class="card-subtitle mb-2 text-body-secondary">Precio: $500</h6>
-                    <p class="card-text">Estilo personalizado según tu rostro y preferencia, con acabado profesional.</p>
+                    <p class="card-text">Estilo personalizado según tu rostro y preferencia, con acabado profesional.
+                    </p>
                 </div>
             </div>
             <div class="card blur p-0" style="width: 18rem;">
@@ -153,9 +154,8 @@
 
     <section id="barberos" class="container-fluid pb-5">
         <h1 class="row ps-5 ">Barberos</h1>
-        <div class="px-5 d-flex justify-content-evenly">
-
-            <div class="card card-barbero mb-3 blur" style="max-width: 840px;">
+        <div class="px-5 container-barberos">
+            <div class="card card-barbero mb-3 g-col-6 blur">
                 <div class="row g-0">
                     <div class="col-md-4">
                         <img src="img/barbero_1.webp" class="img-fluid rounded-start" alt="...">
@@ -202,8 +202,7 @@
                 </div>
             </div>
 
-
-            <div class="card card-barbero mb-3 blur" style="max-width: 840px;">
+            <div class="card card-barbero mb-3 g-col-6 blur">
                 <div class="row g-0">
                     <div class="col-md-4">
                         <img src="img/barbero_1.webp" class="img-fluid rounded-start" alt="...">
@@ -250,6 +249,44 @@
                     </div>
                 </div>
             </div>
+
+            <div class="blur g-col-12 p-3 rounded" style="grid-column: span 6;">
+                <h3>Reseñar barbero</h3>
+                <form action="" id="form_calificarBarbero">
+                    <div class="mb-3">
+                        <label for="inputCalificacionCliente" class="form-label">Nombre completo</label>
+                        <input type="text" class="form-control" id="inputCalificacionCliente"
+                            placeholder="Ana Lopez" required>
+                    </div>
+                    <label for="">Calificacion</label>
+                    <select class="form-select" id="inputCalificacionBarbero" aria-label="Default select example" required>
+                    </select>
+
+                    <div class="star-rating">
+                        <input type="radio" name="rating" id="star5" value="5" required>
+                        <label for="star5">★</label>
+
+                        <input type="radio" name="rating" id="star4" value="4">
+                        <label for="star4">★</label>
+
+                        <input type="radio" name="rating" id="star3" value="3">
+                        <label for="star3">★</label>
+
+                        <input type="radio" name="rating" id="star2" value="2">
+                        <label for="star2">★</label>
+
+                        <input type="radio" name="rating" id="star1" value="1">
+                        <label for="star1">★</label>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inputCalificacionResena" class="form-label">Reseña</label>
+                        <textarea class="form-control" id="inputCalificacionResena" rows="3" required></textarea>
+                    </div>
+                    <button id="btn_calificar" class="btn btn-primary" type="button">Calificar</button>
+                </form>
+            </div>
+        </div>
 
     </section>
 
@@ -300,47 +337,51 @@
         </div>
     </section>
 
-   <!-- HTML -->
-<section id="reservas-section" class="reservas-section logueado container mt-4">
-  <h2 class="mb-3">Listado de Reservas</h2>
+    <!-- HTML -->
+    <section id="reservas-section" class="reservas-section logueado container mt-4">
+        <h2 class="mb-3">Listado de Reservas</h2>
 
-  <!-- filtros / orden -->
-  <form class="row g-3 mb-4 reservas-filtros">
-    <div class="col-md-5">
-      <label for="filter-barbero" class="form-label">Barbero</label>
-      <select id="filter-barbero" class="form-select">
-        <option value="">Todos</option>
-        <!-- <option value="juan">Juan</option> -->
-      </select>
-    </div>
-    <div class="col-md-5 d-flex align-items-end">
-      <button type="button" id="sort-fecha-asc" class="btn btn-outline-primary w-100">
-        Ordenar por fecha ↑
-      </button>
-    </div>
-  </form>
+        <!-- filtros / orden -->
+        <form class="row g-3 mb-4 reservas-filtros">
+            <div class="col-md-5">
+                <label for="filter-barbero" class="form-label">Barbero</label>
+                <select id="filter-barbero" class="form-select">
+                    <option value="">Todos</option>
+                    <!-- <option value="juan">Juan</option> -->
+                </select>
+            </div>
+            <div class="col-md-5 d-flex align-items-end">
+                <button type="button" id="sort-fecha-asc" class="btn btn-outline-primary w-100">
+                    Ordenar por fecha ↑
+                </button>
+            </div>
+        </form>
 
-  <!-- tabla de reservas -->
-  <div class="table-responsive">
-    <table class="table table-striped table-hover align-middle">
-      <thead class="table-light">
-        <tr>
-          <th>Cliente</th>
-          <th>Barbero</th>
-          <th>Fecha</th>
-          <th>Hora</th>
-          <th>Servicios</th>
-        </tr>
-      </thead>
-      <tbody id="tbody-reservas">
-        <!-- filas inyectadas vía JS -->
-      </tbody>
-    </table>
-  </div>
-</section>
+        <!-- tabla de reservas -->
+        <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Barbero</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Servicios</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-reservas">
+                    <!-- filas inyectadas vía JS -->
+                </tbody>
+            </table>
+        </div>
+    </section>
 
-<script src="js/clases.js"></script>
-<script src="js/script.js"></script>
+    <script src="js/clases.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/variables.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 
