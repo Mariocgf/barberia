@@ -110,3 +110,13 @@ h2 {
   grid-template-columns: repeat(12, 1fr);
   gap: 1rem;
 }
+
+.container-contacto{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  gap: 1rem;
+  div{
+    grid-column: 6/12;
+  }
+}
+
