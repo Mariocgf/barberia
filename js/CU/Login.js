@@ -11,6 +11,7 @@ btnIngreso.addEventListener("click", () =>{
         admin.style.display = "flex";
         btnLogout.style.display = "flex"
         BTN_LOGIN.style.display = "none"
+        contenedorAdmin.style.display = "flex";
     }else{
         alert("Contraseña o usuario no valido")
 
@@ -23,4 +24,5 @@ btnLogout.addEventListener("click", () =>{
     admin.style.display = "none";
     btnLogout.style.display = "none"
     BTN_LOGIN.style.display = "flex"
+    contenedorAdmin.style.display = "none";
 })

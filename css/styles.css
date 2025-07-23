@@ -140,7 +140,7 @@ h2 {
 }
 
 #contenedorAdmin{
-  display: flex;
+  display: none;
   align-items: center;
   min-height: 100vh;
   background-size: cover;

@@ -16,3 +16,4 @@ const CONTRA = document.getElementById("contra");
 const btnIngreso = document.getElementById("btnIngreso");
 const admin = document.getElementById("reservas-section");
 const btnLogout = document.getElementById("btnLogout");
+const contenedorAdmin = document.getElementById("contenedorAdmin")
