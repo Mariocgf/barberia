@@ -5,3 +5,14 @@ const INPUT_BARBERO_CALIFICACION = document.querySelector('#inputCalificacionBar
 const INPUT_RESENA_CALIFICAION = document.querySelector("#inputCalificacionResena");
 
 const INPUT_SERVICIO_AGENDA = document.querySelector('servicio-select');
+
+
+//login admin
+const DIV_GLOBAL = document.getElementById("global");
+const BTN_LOGIN = document.getElementById("btnLogin");
+const LOGIN = document.getElementById("loginDiv");
+const EMAIL = document.getElementById("email");
+const CONTRA = document.getElementById("contra");
+const btnIngreso = document.getElementById("btnIngreso");
+const admin = document.getElementById("reservas-section");
+const btnLogout = document.getElementById("btnLogout");
