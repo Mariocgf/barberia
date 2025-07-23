@@ -16,3 +16,10 @@ const CONTRA = document.getElementById("contra");
 const btnIngreso = document.getElementById("btnIngreso");
 const admin = document.getElementById("reservas-section");
 const btnLogout = document.getElementById("btnLogout");
+const INPUT_SERVICIO_AGENDA = document.querySelector('#servicio-select');
+const INPUT_BARBERO_AGENDA = document.querySelector('#select_barber_agenda');
+
+const loader = document.getElementById('loader');
+const content = document.getElementById('reservas-content');
+const tbody = document.getElementById('tbody-reservas');
+const btnOrden = document.getElementById('sort-fecha-asc');

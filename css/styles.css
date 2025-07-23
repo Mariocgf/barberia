@@ -153,3 +153,12 @@ h2 {
 #btnLogout{
   display: none;
 }
+.container-contacto{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  gap: 1rem;
+  div{
+    grid-column: 6/12;
+  }
+}
+
