@@ -14,4 +14,6 @@ const barberos = [
     new Barbero('Carlos López', 'Maestro en degradados y estilos clásicos'),
     new Barbero('María Rodríguez', 'Profesional en coloración y diseño')
 ];
+ const agendas = [];
 
+ const usuAdmin = {email: "admin@admin.com", password: "admin"};

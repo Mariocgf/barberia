@@ -7,6 +7,13 @@ const poblarSelect = (select, opcionInit, data) => {
             option.text = b.nombre;
             select.append(option);
         })
+    }else if (data == "SERVICIOS"){
+        servicios.forEach(s => {
+            const opt = document.createElement('option');
+            opt.value = s.nombre;
+            opt.textContent = `${s.nombre} — $${s.precio}`;
+            selectServicio.appendChild(opt);
+        })
     }
 }
 
