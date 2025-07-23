@@ -12,7 +12,7 @@ const poblarSelect = (select, opcionInit, data) => {
             const opt = document.createElement('option');
             opt.value = s.nombre;
             opt.textContent = `${s.nombre} — $${s.precio}`;
-            selectServicio.appendChild(opt);
+            select.appendChild(opt);
         })
     }
 }
