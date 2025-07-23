@@ -52,3 +52,17 @@ const estructuraCardServicio = (nombre, descripcion, img, calificaciones) => {
             </div>`
 }
 
+btnHome.addEventListener("click", () => {
+    DIV_GLOBAL.style.display = "block";
+    LOGIN.style.display = "none";
+})
+
+btnServicios.addEventListener("click", () => {
+    DIV_GLOBAL.style.display = "block";
+
+    LOGIN.style.display = "none";
+    document
+    .getElementById("servicios")
+    .scrollIntoView({ behavior: "smooth", block: "start" });
+})
+
