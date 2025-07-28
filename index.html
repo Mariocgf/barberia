@@ -500,20 +500,57 @@
         </div>
       </section>
 
-    <section>
-        <h1 class="ps-5">Contacto</h1>
-        <div class="container-contacto">
-            <!-- agrega casilla de contacto aca -->
-            <form action="">
-
-            </form>
-            <div class="container-contacto-map">
-                <img src="img/map.jpg" alt="">
+      <section>
+       
+      
+        <section>
+          <h1 class="ps-5 text-white text-center">Contacto</h1>
+        
+          <!-- contenedor Bootstrap -->
+          <div class="container mt-4">
+            <div class="row gx-4 gy-4 align-items-start">
+              
+              <!-- COLUMNA: formulario -->
+              <div class="col-12 col-lg-6">
+                <form id="contactForm">
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" placeholder="Tu nombre" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" placeholder="tu@correo.com" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                </form>
+              </div>
+        
+              <!-- COLUMNA: mapa -->
+              <div class="col-12 col-lg-6">
+                <div class="h-100 d-flex justify-content-center align-items-center">
+                  <img src="img/map.jpg" class="img-fluid rounded" alt="Mapa de ubicación">
+                </div>
+              </div>
+        
             </div>
-        </div>
-
-
-    </section>
+          </div>
+      
+        
+          <!-- Script de confirmación -->
+          <script>
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+              e.preventDefault();
+              alert('¡Se envió con éxito!');
+              this.reset();
+            });
+          </script>
+        </section>
+        
+      
     </div>
 
     <!-- HTML -->
