@@ -165,3 +165,7 @@ h2 {
   display: none;
 }
 
+#contactForm .form-label {
+  color: #fff;
+}
+

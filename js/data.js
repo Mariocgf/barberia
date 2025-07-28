@@ -9,10 +9,10 @@ const servicios = [
 ];
 
 const barberos = [
-    new Barbero('Juan Pérez', 'Especialista en cortes modernos'),
-    new Barbero('Ana Gómez', 'Experta en perfilado de barba'),
-    new Barbero('Carlos López', 'Maestro en degradados y estilos clásicos'),
-    new Barbero('María Rodríguez', 'Profesional en coloración y diseño')
+    new Barbero('Juan Pérez', 'es un barbero profesional con estilo moderno y atención personalizada. Especialista en cortes y barbas, siempre busca resaltar lo mejor de cada cliente.', 'img/barbero_1.webp'),
+    new Barbero('Ana Gómez', 'Con más de 10 años de experiencia, Ana domina el arte del corte tradicional con un toque moderno. Su atención al detalle y precisión en cada servicio, desde una barba perfectamente perfilada hasta una manicura impecable, la convierten en una opción confiable para quienes buscan elegancia y cuidado personal en cada visita.', 'img/barbero_2.jpg'),
+    new Barbero('Carlos López', ' es la definición de versatilidad. Maneja con soltura todos los servicios y destaca por su calidez y atención personalizada. Ideal para quienes buscan un servicio integral en un solo lugar: corte, barba, tinta o uñas, siempre con buena vibra y resultados impecables.', 'img/barbero_3.webp'),
+    new Barbero('María Rodríguez', 'es conocida por su estilo innovador y su habilidad para transformar cualquier look. Experta en color y tendencias actuales, es ideal si buscas algo diferente, atrevido o personalizado. Ya sea una tinta vibrante o un diseño de barba original', 'img/barbero_4.jpg')
 ];
  const agendas = [
     new Agenda('2025-07-20', servicios[0], 'Carlos', '099123456', 'carlos@mail.com', barberos[0]),

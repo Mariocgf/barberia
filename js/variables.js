@@ -31,5 +31,5 @@ const slcBarberosAgenda = document.querySelector("#barbero-select");
 
 const filterB = document.querySelector("#filter-barbero");
 
-// formulario
 
+const DIV_BARBEROS = document.querySelector(".container-barberos");

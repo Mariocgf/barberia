@@ -17,13 +17,14 @@ const poblarSelect = (select, opcionInit, data) => {
     }
 }
 
-const estructuraCardServicio = (nombre, descripcion, img, calificaciones) => {
-    const resenas = "";
+const cardBarbero = (nombre, descripcion, img, calificaciones) => {
+    let resenas = "";
+    const star = ['★☆☆☆☆','★★☆☆☆','★★★☆☆','★★★★☆','★★★★★'];
     calificaciones.forEach(c => {
         resenas += `<div class="review-box border border-dark-subtle rounded p-2 mb-2">
                         <strong>${c.nombre}</strong>
                         <div class="stars text-warning mb-1">
-                            ★★★★☆
+                            ${star[c.puntaje-1]}
                         </div>
                         <p class="mb-0">${c.descripcion}</p>
                     </div>`
@@ -31,7 +32,7 @@ const estructuraCardServicio = (nombre, descripcion, img, calificaciones) => {
     return `<div class="card card-barbero mb-3 g-col-6 blur">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="${img}" class="img-fluid rounded-start" alt="...">
+                        <img src=${img} class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body d-flex">
@@ -51,6 +52,21 @@ const estructuraCardServicio = (nombre, descripcion, img, calificaciones) => {
                 </div>
             </div>`
 }
+
+const poblarResena = () => {
+    barberos.forEach(b => {
+        b.calificaciones.push(new Calificacion("Ana Lopez", "El corte estuvo bien, pero esperaba más puntualidad.",1))
+    })
+}
+
+const mostrarBarberos = () => {
+    let string = "";
+    barberos.forEach(b => {
+        string += cardBarbero(b.nombre, b.descripcion, b.imgURL, b.calificaciones);
+    })
+    DIV_BARBEROS.innerHTML = string;
+} 
+
 
 btnHome.addEventListener("click", () => {
     DIV_GLOBAL.style.display = "block";
