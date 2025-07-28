@@ -6,15 +6,24 @@ document.addEventListener('DOMContentLoaded', () => {
       tbody.innerHTML = '';
       lista.forEach(r => {
         tbody.insertAdjacentHTML('beforeend', `
-          <tr>
+          <tr data-id="${r.id}">
             <td>${r.cliente.nombre}</td>
             <td>${r.barbero?.nombre || '—'}</td>
             <td>${r.fecha.toISOString().slice(0, 10)}</td>
             <td>${r.fecha.toTimeString().slice(0, 5)}</td>
             <td>${r.servicio.nombre}</td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-sm btn-outline-danger delete-reserva"
+                title="Eliminar reserva">
+                <i class="bi bi-trash"></i>
+              </button>
+            </td>
           </tr>`);
       });
     }
+    window.render = render;
   
     // 8) Filtrar por barbero
     filterB.addEventListener('change', () => {
@@ -28,12 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       render(agendas);
     });
   
-    // 10) Simular precarga (500 ms)
-    // setTimeout(() => {
-    //   loader.classList.add('d-none');
-    //   content.classList.remove('d-none');
-    //   render(agendas);
-    // }, 500);
+    
   });
   
   
