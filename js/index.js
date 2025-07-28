@@ -6,4 +6,6 @@ function inicio() {
     poblarSelect(INPUT_SERVICIO_AGENDA, "Seleccione un servicio", "SERVICIOS");
     poblarSelect(filterB, "Seleccione un barbero", "BARBEROS");
     poblarSelect(slcBarberosAgenda,"Seleccione un barbero","BARBEROS");
+    poblarResena();
+    mostrarBarberos();
 }

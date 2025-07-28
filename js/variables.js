@@ -21,6 +21,8 @@ const admin = document.getElementById("reservas-section");
 const btnLogout = document.getElementById("btnLogout");
 const btnHome = document.querySelector("#btnHome");
 const btnServicios = document.querySelector("#btnServicios");
-const slcBarberosAgenda = document.querySelector("#floatingSelect");
+const slcBarberosAgenda = document.querySelector("#valido");
 
 const filterB = document.querySelector("#filter-barbero");
+
+const DIV_BARBEROS = document.querySelector(".container-barberos");

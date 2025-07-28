@@ -23,10 +23,11 @@ class Calificacion {
   
   // Clase para representar un barbero
   class Barbero {
-    constructor(nombre,descripcion) {
+    constructor(nombre,descripcion, imgURL) {
       this.nombre = nombre;
       this.descripcion = descripcion;
       this.calificaciones = []; // aquí guardamos instancias de Calificacion
+      this.imgURL = imgURL;
     }
   }
     
