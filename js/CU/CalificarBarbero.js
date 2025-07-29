@@ -6,7 +6,7 @@ function calificarBarbero() {
       return;
     }
     const calificacion = new Calificacion(INPUT_CLIENTE_CALIFICACION.value,INPUT_RESENA_CALIFICAION.value,INPUT_RATING_CALIFICACION.value);
-    const barbero = barberos.find(b => b.nombre = INPUT_BARBERO_CALIFICACION.value);
+    const barbero = barberos.find(b => b.nombre == INPUT_BARBERO_CALIFICACION.value);
     barbero.calificaciones.push(calificacion);
     mostrarBarberos();
     FORM_CALIFICACION.reset();

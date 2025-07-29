@@ -8,7 +8,7 @@ function listarServiciosUseCase(containerSelector, serviciosArray) {
       card.style.width = '18rem';
   
       const img = document.createElement('img');
-      img.src = `img/servicio_${idx + 1}.webp`;
+      img.src = s.imgURL;
       img.className = 'card-img-top img-fluid';
       img.alt = s.nombre;
       card.appendChild(img);

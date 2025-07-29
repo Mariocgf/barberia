@@ -14,10 +14,11 @@ class Calificacion {
   
   // Clase para representar un servicio
   class Servicio {
-    constructor(nombre, precio) {
+    constructor(nombre, precio, duracion, imgURL) {
       this.nombre = nombre;   // ej. "Corte de pelo"
       this.precio = precio;   // en la moneda que uses
-      this.duracion = 30; // en minutos
+      this.duracion = duracion || 30; // en minutos
+      this.imgURL = imgURL
     }
   }
   

@@ -67,9 +67,37 @@ h2 {
 }
 .card-barbero {
   grid-column: span 6;
+  height: 20rem;
+  overflow: hidden;
   img {
-    height: 100%;
+    height: 20rem;
   }
+}
+.card-baerbero__resena {
+  overflow-y: scroll;
+  height: 20rem;
+}
+
+.carousel-item {
+  img {
+    height: 35rem;
+    object-fit: cover;
+  }
+}
+.servicios-cards {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  .card {
+    grid-column: span 3;
+  }
+}
+
+#map {
+  width: 100%;
+  height: 400px; /* Ajustá según tu diseño */
+  border-radius: 8px;
 }
 
 /* .reservas-section {
@@ -93,7 +121,6 @@ h2 {
   height: 1px;
 }
 
-
 .star-rating label {
   cursor: pointer;
   color: #ccc;
@@ -105,52 +132,51 @@ h2 {
   color: gold;
 }
 
-.container-barberos{
+.container-barberos {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.container-contacto {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 1rem;
-}
-
-.container-contacto{
-  display: grid;
-  grid-template-columns: repeat(12,1fr);
-  gap: 1rem;
-  div{
+  div {
     grid-column: 6/12;
   }
 }
 
-#loginDiv{
+#loginDiv {
   display: none;
   align-items: center;
   justify-content: center;
   height: 100vh;
   background-image: url("../img/hero.webp");
-    min-height: 100vh;
- background-size: cover;
+  min-height: 100vh;
+  background-size: cover;
 }
 
-#loginForm{
+#loginForm {
   width: 400px;
   height: 300px;
-  background: rgba(255, 255, 255, 0.2); 
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   padding: 20px;
   border-radius: 10px;
 }
 
-#reservas-section{
+#reservas-section {
   display: none;
   flex-direction: column;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.2); 
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
 }
 
-#contenedorAdmin{
+#contenedorAdmin {
   display: flex;
   align-items: center;
   min-height: 100vh;
@@ -161,11 +187,10 @@ h2 {
   height: 100vh;
 }
 
-#btnLogout{
+#btnLogout {
   display: none;
 }
 
 #contactForm .form-label {
   color: #fff;
 }
-
