@@ -12,10 +12,10 @@
       const hora = document.getElementById("inputHora").value;
       const slcBarberosAgenda = document.querySelector(".barberSelect").value;
 
-      verificarAgenda(nombre, email, servicio, slcBarberosAgenda, fecha, hora);
+      agendarCita(nombre, email, servicio, slcBarberosAgenda, fecha, hora);
     })
 
-    function verificarAgenda(nombre, email, servicio, slcBarberosAgenda, fecha, hora) {
+    export default function agendarCita(nombre, email, servicio, slcBarberosAgenda, fecha, hora) {
       
       console.log(nombre, email, servicio, slcBarberosAgenda, fecha, hora)  
 
@@ -44,6 +44,7 @@
 
       if (existe) {
         alert('¡Esta fecha y hora ya está agendada!');
+        return 'No OK'
       } else {
 
         if(servicio == 'Corte de pelo'){
@@ -182,5 +183,6 @@
           agendas.push(nuevoAgenda7)
         }
         alert('Agendado');
+        return 'OK'
       }
     }
