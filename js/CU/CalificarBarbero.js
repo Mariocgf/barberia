@@ -1,4 +1,14 @@
-function calificarBarbero() {
+function calificarBarbero(calificacion, resena, barbero) {
+  if(calificacion == "" ){
+    return "Ingrese una calificacion";
+  }
+  if(resena == ""){
+    return "Ingrese una reseña";
+  }
+  if(barbero == ""){
+    return "Seleccione un barbero";
+  }
+
   if (FORM_CALIFICACION.reportValidity()) { 
     const INPUT_RATING_CALIFICACION = document.querySelector('input[name="rating"]:checked');
     if(!INPUT_RATING_CALIFICACION){
@@ -13,4 +23,8 @@ function calificarBarbero() {
     alert("Calificado con exito")
   }
 
+}
+
+function HandlerCalificarBarbero(){
+  
 }
