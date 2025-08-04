@@ -27,3 +27,28 @@ const filterB = document.querySelector("#filter-barbero");
 
 
 const DIV_BARBEROS = document.querySelector(".container-barberos");
+
+export {
+    FORM_CALIFICACION,
+    INPUT_CLIENTE_CALIFICACION,
+    INPUT_BARBERO_CALIFICACION,
+    INPUT_RESENA_CALIFICAION,
+    INPUT_SERVICIO_AGENDA,
+    loader,
+    content,
+    tbody,
+    btnOrden,
+    DIV_GLOBAL,
+    BTN_LOGIN,
+    LOGIN,
+    EMAIL,
+    CONTRA,
+    btnIngreso,
+    admin,
+    btnLogout,
+    btnHome,
+    btnServicios,
+    slcBarberosAgenda,
+    filterB,
+    DIV_BARBEROS
+};

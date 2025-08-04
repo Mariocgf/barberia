@@ -1,5 +1,9 @@
+import {filterB, btnOrden} from '/js/variables.js'
+import {agendas} from "../data.js"
+
 document.addEventListener('DOMContentLoaded', () => {
 
+    const tbody = document.querySelector('tbody');
 
     // 7) Función de renderizado
     function render(lista) {
@@ -36,7 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
       agendas.sort((a, b) => a.fecha - b.fecha);
       render(agendas);
     });
-  
+    
+    render(agendas);
     
   });
   

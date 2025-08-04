@@ -1,3 +1,5 @@
+import {BTN_LOGIN, DIV_GLOBAL, LOGIN, EMAIL, CONTRA, admin} from '/js/variables.js'
+import {usuAdmin} from '../data.js'
 
 BTN_LOGIN.addEventListener("click", () => {
     DIV_GLOBAL.style.display = "none";

@@ -1,5 +1,5 @@
-const {Calificacion} = require('../clases');
-const {barberos} = require('../data');
+import  {Calificacion} from '/js/clases.js';
+import {barberos} from '/js/data.js';
 
 const calificarBarbero = (rating, resena, barberoI, cliente) => {
   if (cliente == "") {
@@ -44,4 +44,4 @@ function HandlerCalificarBarbero() {
   alert(salida);
 }
 
-module.exports = calificarBarbero;
+export {calificarBarbero, HandlerCalificarBarbero};

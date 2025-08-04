@@ -24,3 +24,5 @@ function listarServiciosUseCase(containerSelector, serviciosArray) {
       container.appendChild(card);
     });
   }
+
+  export {listarServiciosUseCase}

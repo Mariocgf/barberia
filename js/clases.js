@@ -49,4 +49,4 @@ class Calificacion {
 }
   
   
-module.exports = {Calificacion, Servicio, Barbero, Agenda}
+export {Calificacion, Servicio, Barbero, Agenda};

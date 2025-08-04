@@ -1,3 +1,6 @@
+import {filterB } from '/js/variables.js'
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // 5) Referencias al DOM

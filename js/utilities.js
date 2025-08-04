@@ -1,3 +1,8 @@
+import {DIV_GLOBAL, LOGIN} from '/js/variables.js'
+import { barberos } from './data.js'
+import { servicios } from './data.js'
+import { Calificacion } from './clases.js'
+
 const poblarSelect = (select, opcionInit, data) => {
     select.innerHTML = `<option selected value="0" >${opcionInit}</option>`
     if (data == "BARBEROS") {
@@ -42,3 +47,4 @@ btnServicios.addEventListener("click", () => {
     .scrollIntoView({ behavior: "smooth", block: "start" });
 })
 
+export {poblarSelect, poblarResena}

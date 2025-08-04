@@ -1,4 +1,4 @@
-const {Calificacion, Servicio, Barbero, Agenda} = require('./clases');
+import {Calificacion, Servicio, Barbero, Agenda} from '/js/clases.js'
 
 const servicios = [
     new Servicio('Corte de pelo', 600, 30, 'img/servicio_1.webp'),
@@ -23,4 +23,4 @@ const barberos = [
 
  const usuAdmin = {email: "admin@admin.com", password: "admin"};
 
- module.exports ={barberos, servicios, agendas, usuAdmin}
+ export {barberos, servicios, agendas, usuAdmin};

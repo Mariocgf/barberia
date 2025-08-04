@@ -1,6 +1,7 @@
-    const btnFormulario = document.getElementById("btnFormulario");
+    import {agendas} from "../data.js"
+    import {Agenda} from "../clases.js"
 
-    
+    const btnFormulario = document.getElementById("btnFormulario");
     
 
 

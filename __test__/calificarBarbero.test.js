@@ -1,4 +1,4 @@
-const calificar = require('../js/CU/CalificarBarbero');
+import {calificarBarbero} from '../js/CU/CalificarBarbero';
 
 
 test("Test de calificar barbero", function(){
@@ -6,6 +6,6 @@ test("Test de calificar barbero", function(){
     const barbero = "Ana Gómez";
     const resena = "Corta con la tijera oxidada";
     const rating = 5;
-    const resultado = calificar(rating, resena, barbero, cliente);
+    const resultado = calificarBarbero(rating, resena, barbero, cliente);
     expect(resultado).toEqual("Calificado con exito");
 })
