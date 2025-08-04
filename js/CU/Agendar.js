@@ -24,6 +24,10 @@ function agendarCita(nombre, email, servicio, slcBarberosAgenda, fecha, hora) {
         return;
       }
 
+      
+      const servicio1 = servicios.find(b => b.nombre == servicio);
+      const barbero1 = barberos.find(b => b.nombre == slcBarberosAgenda);
+
       const nuevaFecha = new Date(fecha)
 
       
@@ -49,37 +53,37 @@ function agendarCita(nombre, email, servicio, slcBarberosAgenda, fecha, hora) {
 
         if(servicio == 'Corte de pelo'){
 
-        const nuevoAgenda1 = new Agenda(nuevaFecha, servicio, nombre, email, slcBarberosAgenda )
+        const nuevoAgenda1 = new Agenda(nuevaFecha, servicio1, nombre, email, barbero1 )
         
         const nuevaFecha2 = new Date(nuevaFecha.getTime());
         nuevaFecha2.setMinutes(nuevaFecha2.getMinutes() + 15);
 
-        const nuevoAgenda2 = new Agenda(nuevaFecha2, servicio, nombre, email, slcBarberosAgenda )
+        const nuevoAgenda2 = new Agenda(nuevaFecha2, servicio1, nombre, email, barbero1 )
         agendas.push(nuevoAgenda1)
         agendas.push(nuevoAgenda2)
 
         }else if(servicio == 'Perfilado y afeitado de barba'){
-          const nuevoAgenda1 = new Agenda(nuevaFecha, servicio, nombre, email, slcBarberosAgenda )
+          const nuevoAgenda1 = new Agenda(nuevaFecha, servicio1, nombre, email, barbero1 )
           agendas.push(nuevoAgenda1)
         }else if(servicio == 'Coloración capilar'){
 
-          const nuevoAgenda1 = new Agenda(nuevaFecha, servicio, nombre, email, slcBarberosAgenda )
+          const nuevoAgenda1 = new Agenda(nuevaFecha, servicio1, nombre, email, barbero1 )
         
           const nuevaFecha2 = new Date(nuevaFecha.getTime());
           nuevaFecha2.setMinutes(nuevaFecha2.getMinutes() + 15);
-          const nuevoAgenda2 = new Agenda(nuevaFecha2, servicio, nombre, email, slcBarberosAgenda )
+          const nuevoAgenda2 = new Agenda(nuevaFecha2, servicio1, nombre, email, barbero1 )
 
           const nuevaFecha3 = new Date(nuevaFecha2.getTime());
           nuevaFecha3.setMinutes(nuevaFecha3.getMinutes() + 15);
-          const nuevoAgenda3 = new Agenda(nuevaFecha3, servicio, nombre, email, slcBarberosAgenda )
+          const nuevoAgenda3 = new Agenda(nuevaFecha3, servicio1, nombre, email, barbero1 )
 
           const nuevaFecha4 = new Date(nuevaFecha3.getTime());
           nuevaFecha4.setMinutes(nuevaFecha4.getMinutes() + 15);
-          const nuevoAgenda4 = new Agenda(nuevaFecha4, servicio, nombre, email, slcBarberosAgenda )
+          const nuevoAgenda4 = new Agenda(nuevaFecha4, servicio1, nombre, email, barbero1 )
 
           const nuevaFecha5 = new Date(nuevaFecha4.getTime());
           nuevaFecha5.setMinutes(nuevaFecha5.getMinutes() + 15);
-          const nuevoAgenda5 = new Agenda(nuevaFecha5, servicio, nombre, email, slcBarberosAgenda )
+          const nuevoAgenda5 = new Agenda(nuevaFecha5, servicio1, nombre, email, barbero1 )
 
           agendas.push(nuevoAgenda1)
           agendas.push(nuevoAgenda2)
@@ -87,56 +91,56 @@ function agendarCita(nombre, email, servicio, slcBarberosAgenda, fecha, hora) {
           agendas.push(nuevoAgenda4)
           agendas.push(nuevoAgenda5)
         }else if(servicio == 'Manicura masculina'){
-          const nuevoAgenda1 = new Agenda(nuevaFecha, servicio, nombre, email, slcBarberosAgenda )
+          const nuevoAgenda1 = new Agenda(nuevaFecha, servicio1, nombre, email, barbero1 )
         
           const nuevaFecha2 = new Date(nuevaFecha.getTime());
           nuevaFecha2.setMinutes(nuevaFecha2.getMinutes() + 15);
-          const nuevoAgenda2 = new Agenda(nuevaFecha2, servicio, nombre, email, slcBarberosAgenda )
+          const nuevoAgenda2 = new Agenda(nuevaFecha2, servicio1, nombre, email, barbero1 )
 
           const nuevaFecha3 = new Date(nuevaFecha2.getTime());
           nuevaFecha3.setMinutes(nuevaFecha3.getMinutes() + 15);
-          const nuevoAgenda3 = new Agenda(nuevaFecha3, servicio, nombre, email, slcBarberosAgenda )
+          const nuevoAgenda3 = new Agenda(nuevaFecha3, servicio1, nombre, email, barbero1 )
 
           agendas.push(nuevoAgenda1)
           agendas.push(nuevoAgenda2)
           agendas.push(nuevoAgenda3)
         }else if(servicio == 'Pack Renovate (Corte + Barba)'){
-          const nuevoAgenda1 = new Agenda(nuevaFecha, servicio, nombre, email, slcBarberosAgenda )
+          const nuevoAgenda1 = new Agenda(nuevaFecha, servicio1, nombre, email, barbero1 )
         
           const nuevaFecha2 = new Date(nuevaFecha.getTime());
           nuevaFecha2.setMinutes(nuevaFecha2.getMinutes() + 15);
-          const nuevoAgenda2 = new Agenda(nuevaFecha2, servicio, nombre, email, slcBarberosAgenda )
+          const nuevoAgenda2 = new Agenda(nuevaFecha2, servicio1, nombre, email, barbero1 )
 
           const nuevaFecha3 = new Date(nuevaFecha2.getTime());
           nuevaFecha3.setMinutes(nuevaFecha3.getMinutes() + 15);
-          const nuevoAgenda3 = new Agenda(nuevaFecha3, servicio, nombre, email, slcBarberosAgenda )
+          const nuevoAgenda3 = new Agenda(nuevaFecha3, servicio1, nombre, email, barbero1 )
 
           agendas.push(nuevoAgenda1)
           agendas.push(nuevoAgenda2)
           agendas.push(nuevoAgenda3)
         }else if(servicio == 'Pack Imagen Completa (Corte + Barba + Manicura)'){
           
-          const nuevoAgenda1 = new Agenda(nuevaFecha, servicio, nombre, email, slcBarberosAgenda )
+          const nuevoAgenda1 = new Agenda(nuevaFecha, servicio1, nombre, email, barbero1 )
         
           const nuevaFecha2 = new Date(nuevaFecha.getTime());
           nuevaFecha2.setMinutes(nuevaFecha2.getMinutes() + 15);
-          const nuevoAgenda2 = new Agenda(nuevaFecha2, servicio, nombre, email, slcBarberosAgenda )
+          const nuevoAgenda2 = new Agenda(nuevaFecha2, servicio1, nombre, email, barbero1 )
 
           const nuevaFecha3 = new Date(nuevaFecha2.getTime());
           nuevaFecha3.setMinutes(nuevaFecha3.getMinutes() + 15);
-          const nuevoAgenda3 = new Agenda(nuevaFecha3, servicio, nombre, email, slcBarberosAgenda )
+          const nuevoAgenda3 = new Agenda(nuevaFecha3, servicio1, nombre, email, barbero1 )
 
           const nuevaFecha4 = new Date(nuevaFecha3.getTime());
           nuevaFecha4.setMinutes(nuevaFecha4.getMinutes() + 15);
-          const nuevoAgenda4 = new Agenda(nuevaFecha4, servicio, nombre, email, slcBarberosAgenda )
+          const nuevoAgenda4 = new Agenda(nuevaFecha4, servicio1, nombre, email, barbero1 )
 
           const nuevaFecha5 = new Date(nuevaFecha4.getTime());
           nuevaFecha5.setMinutes(nuevaFecha5.getMinutes() + 15);
-          const nuevoAgenda5 = new Agenda(nuevaFecha5, servicio, nombre, email, slcBarberosAgenda )
+          const nuevoAgenda5 = new Agenda(nuevaFecha5, servicio1, nombre, email, barbero1 )
 
           const nuevaFecha6 = new Date(nuevaFecha5.getTime());
           nuevaFecha6.setMinutes(nuevaFecha6.getMinutes() + 15);
-          const nuevoAgenda6 = new Agenda(nuevaFecha6, servicio, nombre, email, slcBarberosAgenda )
+          const nuevoAgenda6 = new Agenda(nuevaFecha6, servicio1, nombre, email, barbero1 )
 
 
           agendas.push(nuevoAgenda1)
@@ -146,32 +150,32 @@ function agendarCita(nombre, email, servicio, slcBarberosAgenda, fecha, hora) {
           agendas.push(nuevoAgenda5)
           agendas.push(nuevoAgenda6)
 
-        }else if(servicio.value == 'Color + Corte' ){
-          const nuevoAgenda1 = new Agenda(nuevaFecha, servicio.value, nombre.value, email.value, slcBarberosAgenda.value )
+        }else if(servicio == 'Color + Corte' ){
+          const nuevoAgenda1 = new Agenda(nuevaFecha, servicio.value, nombre.value, email.value, barbero1.value )
         
           const nuevaFecha2 = new Date(nuevaFecha.getTime());
           nuevaFecha2.setMinutes(nuevaFecha2.getMinutes() + 15);
-          const nuevoAgenda2 = new Agenda(nuevaFecha2, servicio.value, nombre.value, email.value, slcBarberosAgenda.value )
+          const nuevoAgenda2 = new Agenda(nuevaFecha2, servicio1, nombre.value, email.value, barbero1.value )
 
           const nuevaFecha3 = new Date(nuevaFecha2.getTime());
           nuevaFecha3.setMinutes(nuevaFecha3.getMinutes() + 15);
-          const nuevoAgenda3 = new Agenda(nuevaFecha3, servicio.value, nombre.value, email.value, slcBarberosAgenda.value )
+          const nuevoAgenda3 = new Agenda(nuevaFecha3, servicio1, nombre.value, email.value, barbero1.value )
 
           const nuevaFecha4 = new Date(nuevaFecha3.getTime());
           nuevaFecha4.setMinutes(nuevaFecha4.getMinutes() + 15);
-          const nuevoAgenda4 = new Agenda(nuevaFecha4, servicio.value, nombre.value, email.value, slcBarberosAgenda.value )
+          const nuevoAgenda4 = new Agenda(nuevaFecha4, servicio1, nombre.value, email.value, barbero1.value )
 
           const nuevaFecha5 = new Date(nuevaFecha4.getTime());
           nuevaFecha5.setMinutes(nuevaFecha5.getMinutes() + 15);
-          const nuevoAgenda5 = new Agenda(nuevaFecha5, servicio.value, nombre.value, email.value, slcBarberosAgenda.value )
+          const nuevoAgenda5 = new Agenda(nuevaFecha5, servicio1, nombre.value, email.value, barbero1.value )
 
           const nuevaFecha6 = new Date(nuevaFecha5.getTime());
           nuevaFecha6.setMinutes(nuevaFecha6.getMinutes() + 15);
-          const nuevoAgenda6 = new Agenda(nuevaFecha6, servicio.value, nombre.value, email.value, slcBarberosAgenda.value )
+          const nuevoAgenda6 = new Agenda(nuevaFecha6, servicio1, nombre.value, email.value, barbero1.value )
 
           const nuevaFecha7 = new Date(nuevaFecha6.getTime());
           nuevaFecha7.setMinutes(nuevaFecha7.getMinutes() + 15);
-          const nuevoAgenda7 = new Agenda(nuevaFecha7, servicio.value, nombre.value, email.value, slcBarberosAgenda.value )
+          const nuevoAgenda7 = new Agenda(nuevaFecha7, servicio1, nombre.value, email.value, barbero1.value )
 
 
           agendas.push(nuevoAgenda1)
