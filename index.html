@@ -324,46 +324,54 @@
     </footer>
     </div>
 
-    <!-- HTML -->
-    <section id="reservas-section" class="reservas-section logueado container mt-4">
-      <h2 class="mb-3">Listado de Reservas</h2>
-
-      <!-- filtros / orden -->
-      <form class="row g-3 mb-4 reservas-filtros">
-        <div class="col-md-5">
+    <section id="reservas-section" class="container mt-5">
+      <h2 class="m-4">Listado de Reservas</h2>
+    
+      <!-- filtros / orden (igual que antes) -->
+      <form class="row g-3 mb-4 align-items-end">
+        <div class="col-12 col-sm-6 col-md-5">
           <label for="filter-barbero" class="form-label">Barbero</label>
           <select id="filter-barbero" class="form-select">
             <option value="">Todos</option>
-            <!-- <option value="juan">Juan</option> -->
           </select>
         </div>
-        <div class="col-md-5 d-flex align-items-end">
-          <button type="button" id="sort-fecha-asc" class="btn btn-outline-primary w-100">
-            Ordenar por fecha ↑
+        <div class="col-12 col-sm-6 col-md-5">
+          <button 
+            type="button"
+            id="sort-fecha-asc"
+            class="btn btn-outline-primary w-100">
+            Ordenar por fecha <i class="bi bi-arrow-down-up"></i>
           </button>
         </div>
       </form>
-
-      <!-- tabla de reservas -->
-      <div class="table-responsive">
-        <table class="table table-striped table-hover align-middle">
-          <thead class="table-light">
-            <tr>
-              <th>Cliente</th>
-              <th>Barbero</th>
-              <th>Fecha</th>
-              <th>Hora</th>
-              <th>Servicios</th>
-              <th>Acción</th>
-            </tr>
-          </thead>
-
-          <tbody id="tbody-reservas">
-            <!-- filas inyectadas vía JS -->
-          </tbody>
-        </table>
+    
+      <!-- === VISTA DESKTOP (≥576px) === -->
+      <div class="d-none d-sm-block">
+        <div class="table-responsive">
+          <table class="table table-striped table-hover align-middle mb-0">
+            <thead class="table-light">
+              <tr>
+                <th>Cliente</th>
+                <th>Barbero</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Servicios</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-reservas-desktop">
+              <!-- filas JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    
+      <!-- === VISTA MÓVIL (<576px) === -->
+      <div id="list-reservas-mobile" class="d-block d-sm-none">
+        <!-- cards JS -->
       </div>
     </section>
+    
 
     <!-- Modal de confirmación -->
     <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">

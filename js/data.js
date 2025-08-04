@@ -15,8 +15,8 @@ const barberos = [
     new Barbero('María Rodríguez', 'es conocida por su estilo innovador y su habilidad para transformar cualquier look. Experta en color y tendencias actuales, es ideal si buscas algo diferente, atrevido o personalizado. Ya sea una tinta vibrante o un diseño de barba original', 'img/barbero_4.jpg')
 ];
  const agendas = [
-    new Agenda('2025-07-20', servicios[0], 'Carlos', '099123456', 'carlos@mail.com', barberos[0]),
-    new Agenda('2025-07-21', servicios[1], 'María', '098654321', 'maria@mail.com', barberos[1])
+    new Agenda('2025-07-20', servicios[0], 'Carlos', 'carlos@mail.com', barberos[0]),
+    new Agenda('2025-07-21', servicios[1], 'María', 'maria@mail.com', barberos[1])
   ];
 
  const usuAdmin = {email: "admin@admin.com", password: "admin"};
