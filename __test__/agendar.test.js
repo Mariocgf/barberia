@@ -1,4 +1,4 @@
-import agendarCita from "../js/CU/agendar.js";
+const agendarCita = require("../js/CU/Agendar")
 
 test("Test de agendar cita", function(){
     const nombre = "Gaston";

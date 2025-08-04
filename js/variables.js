@@ -27,3 +27,9 @@ const filterB = document.querySelector("#filter-barbero");
 
 
 const DIV_BARBEROS = document.querySelector(".container-barberos");
+
+
+
+ const btnFormulario = document.getElementById("btnFormulario");
+
+   

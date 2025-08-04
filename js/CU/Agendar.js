@@ -1,27 +1,15 @@
-    const btnFormulario = document.getElementById("btnFormulario");
+    const {agendas} = require("../data")
 
+    const {Agenda} = require("../clases") 
     
-    
 
-
-    btnFormulario.addEventListener("click", () => {
-      const nombre = document.getElementById("name").value;
-      const email = document.getElementById("emails").value;
-      const servicio = document.getElementById("servicio-select").value;
-      const fecha = document.getElementById("date").value;
-      const hora = document.getElementById("inputHora").value;
-      const slcBarberosAgenda = document.querySelector(".barberSelect").value;
-
-      agendarCita(nombre, email, servicio, slcBarberosAgenda, fecha, hora);
-    })
-
-    export default function agendarCita(nombre, email, servicio, slcBarberosAgenda, fecha, hora) {
+    function agendarCita(nombre, email, servicio, slcBarberosAgenda, fecha, hora) {
       
       console.log(nombre, email, servicio, slcBarberosAgenda, fecha, hora)  
 
       if (nombre == "" || email == "" || servicio  == "" || fecha == "" || hora == "") {
-        alert('Hay campos obligatorios');
-        return;
+
+        return 'Campos invalidos';
       }
 
       const nuevaFecha = new Date(fecha)
@@ -29,21 +17,17 @@
       
       const horaTotal = hora.split(":")
       
-      console.log(agendas)
-      
       nuevaFecha.setHours(horaTotal[0])
       nuevaFecha.setMinutes(horaTotal[1])
       
     
     const existe = agendas.some(cita => {
 
-      console.log(cita.barbero == slcBarberosAgenda)  
       return ((cita.barbero == slcBarberosAgenda || cita.cliente.email == email) && cita.fecha.getFullYear() == nuevaFecha.getFullYear() && cita.fecha.getMonth() == nuevaFecha.getMonth() && cita.fecha.getDate() == nuevaFecha.getDate() && cita.fecha.getHours() == nuevaFecha.getHours() && cita.fecha.getMinutes() == nuevaFecha.getMinutes())
 
     })
 
       if (existe) {
-        alert('¡Esta fecha y hora ya está agendada!');
         return 'No OK'
       } else {
 
@@ -182,7 +166,8 @@
           agendas.push(nuevoAgenda6)
           agendas.push(nuevoAgenda7)
         }
-        alert('Agendado');
         return 'OK'
       }
     }
+
+    module.exports = agendarCita
