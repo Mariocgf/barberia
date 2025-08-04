@@ -4,6 +4,7 @@ import { servicios } from './data.js';
 import {HandlerCalificarBarbero} from './CU/CalificarBarbero.js'
 import {poblarSelect, poblarResena} from './utilities.js'
 import {mostrarBarberos} from './CU/ListarBarberos.js'
+import { agendarCita } from './CU/agendar.js';
 
 window.addEventListener("load", inicio);
 function inicio() {
@@ -16,3 +17,22 @@ function inicio() {
     poblarResena();
     mostrarBarberos();
 }
+
+const btnFormulario = document.getElementById("btnFormulario"); 
+btnFormulario.addEventListener("click", () => {
+    const nombre = document.getElementById("name").value;
+    const email = document.getElementById("emails").value;
+    const servicio = document.getElementById("servicio-select").value;
+    const fecha = document.getElementById("date").value;
+    const hora = document.getElementById("inputHora").value;
+    const slcBarberosAgenda = document.querySelector(".barberSelect").value;
+
+    let result = agendarCita(nombre, email, servicio, slcBarberosAgenda, fecha, hora);
+    if (result && result === 'OK') {
+        alert('Agendado');
+    } else if (result && result === 'No OK') {
+        alert('Ya existe una cita para ese horario y fecha');
+    } else {
+        alert('Ha ocurrido un error')
+    }
+})
