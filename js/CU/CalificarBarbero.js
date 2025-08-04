@@ -1,6 +1,5 @@
 const {Calificacion} = require('../clases');
 const {barberos} = require('../data');
-const mostrarBarberos = require('./ListarBarberos');
 
 const calificarBarbero = (rating, resena, barberoI, cliente) => {
   if (cliente == "") {
@@ -15,15 +14,13 @@ const calificarBarbero = (rating, resena, barberoI, cliente) => {
   if (resena.value == "") {
     return "Ingrese una reseña";
   }
-
     const calificacion = new Calificacion(cliente, resena, rating);
     const barbero = barberos.find(b => b.nombre == barberoI);
     if(!barbero){
       return "Barbero no encontrado";
     }
     barbero.calificaciones.push(calificacion);
-    //mostrarBarberos();
-    //FORM_CALIFICACION.reset();
+
     return "Calificado con exito";
 
 }
@@ -43,6 +40,7 @@ function HandlerCalificarBarbero() {
     return "Ingrese una reseña";
   }
   const salida = calificarBarbero(INPUT_RATING_CALIFICACION.value, INPUT_RESENA_CALIFICAION.value, INPUT_BARBERO_CALIFICACION.value, INPUT_CLIENTE_CALIFICACION.value);
+  mostrarBarberos();
   alert(salida);
 }
 

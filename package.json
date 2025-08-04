@@ -4,5 +4,9 @@
   },
   "devDependencies": {
     "jest": "^30.0.5"
+  },
+  "type":"module",
+  "jest":{
+    "testEnvironment": "node"
   }
 }
