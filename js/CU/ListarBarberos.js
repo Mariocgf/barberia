@@ -71,3 +71,4 @@ const cardBarbero = ({ nombre, descripcion, imgURL, calificaciones }, i) => {
     mostrarBarberos();
   });
   
+  module.exports = mostrarBarberos;
