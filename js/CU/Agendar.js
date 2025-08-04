@@ -15,7 +15,7 @@
       agendarCita(nombre, email, servicio, slcBarberosAgenda, fecha, hora);
     })
 
-    export default function agendarCita(nombre, email, servicio, slcBarberosAgenda, fecha, hora) {
+function agendarCita(nombre, email, servicio, slcBarberosAgenda, fecha, hora) {
       
       console.log(nombre, email, servicio, slcBarberosAgenda, fecha, hora)  
 

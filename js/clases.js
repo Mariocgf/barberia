@@ -48,5 +48,3 @@ class Calificacion {
     }
 }
   
-  
-module.exports = {Calificacion, Servicio, Barbero, Agenda}

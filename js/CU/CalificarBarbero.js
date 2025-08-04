@@ -1,6 +1,3 @@
-const {Calificacion} = require('../clases');
-const {barberos} = require('../data');
-
 const calificarBarbero = (rating, resena, barberoI, cliente) => {
   if (cliente == "") {
     return "Seleccione un cliente";
@@ -44,4 +41,3 @@ function HandlerCalificarBarbero() {
   alert(salida);
 }
 
-module.exports = calificarBarbero;

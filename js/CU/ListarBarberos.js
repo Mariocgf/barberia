@@ -1,4 +1,3 @@
-const module = require('module');
 // JS completo para cardBarbero con carrusel manual y flechas nativas
 const cardBarbero = ({ nombre, descripcion, imgURL, calificaciones }, i) => {
     const carouselId = `carouselResenas-${i}`;
@@ -72,4 +71,3 @@ const cardBarbero = ({ nombre, descripcion, imgURL, calificaciones }, i) => {
     mostrarBarberos();
   });
   
-  module.exports = mostrarBarberos;
