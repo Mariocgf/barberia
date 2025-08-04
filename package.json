@@ -3,10 +3,11 @@
     "test": "jest"
   },
   "devDependencies": {
-    "jest": "^30.0.5"
+    "jest": "^30.0.5",
+    "test": "^3.3.0"
   },
-  "type":"module",
-  "jest":{
+  "type": "module",
+  "jest": {
     "testEnvironment": "node"
   }
 }
