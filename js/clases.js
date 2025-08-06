@@ -37,7 +37,7 @@ class Calificacion {
   // Clase para representar la agenda general
   class Agenda {
     
-    constructor(fecha, servicio, nombreCliente, emailCliente, barbero = null) {
+    constructor(fecha, servicio, nombreCliente, emailCliente, barbero) {
       this.fecha = typeof fecha === 'string' ? new Date(fecha) : fecha;
       this.servicio = servicio;
       this.barbero = barbero; // puede quedar null
