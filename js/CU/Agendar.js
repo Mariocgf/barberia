@@ -9,8 +9,8 @@ btnFormulario.addEventListener("click", () => {
     const hora = document.getElementById("inputHora").value;
     const barberoSeleccionado = document.querySelector(".barberSelect").value;
 
-    if (!nombre || !email || !servicio || !fecha || !hora || !barberoSeleccionado) {
-      throw new Error('Todos los campos son obligatorios');
+    if (!nombre || !email || !servicio || !fecha || !hora) {
+      throw new Error('Nombre, email, servicio, fecha y hora son obligatorios');
     }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -28,16 +28,18 @@ btnFormulario.addEventListener("click", () => {
 });
 
 function agendarCita(nombre, email, servicioNombre, nombreBarbero, fechaStr, horaStr) {
-
-  if (!servicios || !barberos || !agendas) {
+  if (!servicios || !agendas) {
     throw new Error('Error en la configuración del sistema');
   }
 
   const servicio = servicios.find(s => s.nombre === servicioNombre);
-  const barbero = barberos.find(b => b.nombre === nombreBarbero);
-
   if (!servicio) throw new Error('Servicio no encontrado');
-  if (!barbero) throw new Error('Barbero no encontrado');
+
+  // Solo buscar barbero si se proporcionó un nombre
+  const barbero = nombreBarbero && nombreBarbero.trim() !== "" ? 
+                 barberos.find(b => b.nombre === nombreBarbero) : 
+                 null;
+
 
   const fechaCita = new Date(fechaStr);
   const [horas, minutos] = horaStr.split(":").map(Number);
@@ -56,20 +58,23 @@ function agendarCita(nombre, email, servicioNombre, nombreBarbero, fechaStr, hor
   finCita.setMinutes(finCita.getMinutes() + servicio.duracion);
 
   for (const citaExistente of agendas) {
-
     if (citaExistente.fecha.toDateString() === fechaCita.toDateString()) {
       const inicioExistente = new Date(citaExistente.fecha);
       const finExistente = new Date(inicioExistente);
       finExistente.setMinutes(finExistente.getMinutes() + citaExistente.servicio.duracion);
 
-      if (citaExistente.barbero?.nombre === barbero.nombre) {
-        if ((fechaCita >= inicioExistente && fechaCita < finExistente) ||
-            (finCita > inicioExistente && finCita <= finExistente) ||
-            (fechaCita <= inicioExistente && finCita >= finExistente)) {
-          throw new Error(`El barbero ${barbero.nombre} ya tiene una cita de ${citaExistente.servicio.nombre} entre ${inicioExistente.toLocaleTimeString()} y ${finExistente.toLocaleTimeString()}`);
+      // Solo verificar conflicto con barbero si hay barbero en la cita existente y en la nueva
+      if (barbero && citaExistente.barbero) {
+        if (citaExistente.barbero.nombre === barbero.nombre) {
+          if ((fechaCita >= inicioExistente && fechaCita < finExistente) ||
+              (finCita > inicioExistente && finCita <= finExistente) ||
+              (fechaCita <= inicioExistente && finCita >= finExistente)) {
+            throw new Error(`El barbero ${barbero.nombre} ya tiene una cita de ${citaExistente.servicio.nombre} entre ${inicioExistente.toLocaleTimeString()} y ${finExistente.toLocaleTimeString()}`);
+          }
         }
       }
 
+      // Verificar conflicto con el cliente (email)
       if (citaExistente.cliente.email === email) {
         if ((fechaCita >= inicioExistente && fechaCita < finExistente) ||
             (finCita > inicioExistente && finCita <= finExistente) ||
@@ -80,7 +85,7 @@ function agendarCita(nombre, email, servicioNombre, nombreBarbero, fechaStr, hor
     }
   }
 
-  const nuevaCita = new Agenda(fechaCita, servicio, nombre, email, barbero);
+  const nuevaCita = new Agenda(fechaCita, servicio, nombre, email, barbero || null);
   agendas.push(nuevaCita);
   
   return 'OK';
